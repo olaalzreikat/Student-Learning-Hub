@@ -19,7 +19,6 @@ function Resources() {
     
     const navigate = useNavigate();
     
-    // Get fresh progress data
     const progress = getProgress();
 
     useEffect(() => {
@@ -65,7 +64,6 @@ function Resources() {
         setClassProgress(progressMap);
     };
 
-    // Enhanced completion check functions
     const isVideoCompleted = (videoId) => {
         return progress.completedVideos?.includes(videoId) || false;
     };
@@ -189,8 +187,8 @@ downloadFile(guide);
 const downloadFile = (guide) => {
     // Create a link element
     const link = document.createElement('a');
-    link.href = guide.fileUrl; // Use the file URL from your data
-    link.download = guide.fileName || `${guide.title}.pdf`; // Use custom filename or generate one
+    link.href = guide.fileUrl; 
+    link.download = guide.fileName || `${guide.title}.pdf`; 
     link.target = '_blank'; // Open in new tab as fallback
     
     // Trigger download
