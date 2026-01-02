@@ -1,11 +1,4 @@
-/* ============================================
-   PROBLEMS PAGE - SAME LAYOUT AS QUIZ
-   Two columns: Main Content + Sidebar
-   ============================================ */
 
-/* ============================================
-   1. PAGE FOUNDATION
-   ============================================ */
 
 .problemsPage {
     min-height: 100vh;
@@ -42,9 +35,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   2. HEADER SECTION - BLUE GRADIENT
-   ============================================ */
 
 .problemsWrapper {
     padding: 0;
@@ -137,9 +127,6 @@
     margin-top: 8px;
 }
 
-/* ============================================
-   3. TWO COLUMN LAYOUT
-   ============================================ */
 
 .problemsLayout {
     background: #F1F5F9;
@@ -152,9 +139,6 @@
     align-items: start;
 }
 
-/* ============================================
-   4. MAIN CONTENT (LEFT)
-   ============================================ */
 
 .problemsMainContent {
     display: flex;
@@ -259,9 +243,6 @@
     box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
-/* ============================================
-   5. EXPLANATION SECTION
-   ============================================ */
 
 .explanationSection {
     margin-top: 32px;
@@ -338,9 +319,6 @@
     white-space: pre-line;
 }
 
-/* ============================================
-   6. NAVIGATION BUTTONS
-   ============================================ */
 
 .problemNavigation {
     display: flex;
@@ -431,9 +409,7 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   7. RIGHT SIDEBAR
-   ============================================ */
+
 
 .problemsSidebar {
     display: flex;
@@ -569,9 +545,7 @@
     margin-bottom: 0;
 }
 
-/* ============================================
-   8. FLOATING TOOLS
-   ============================================ */
+
 
 .floatingTool {
     position: fixed;
@@ -722,9 +696,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   9. RESULTS SCREEN
-   ============================================ */
 
 .resultsContainer {
     background: white;
@@ -798,9 +769,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   10. RESPONSIVE
-   ============================================ */
 
 @media (max-width: 1200px) {
     .problemsLayout {
