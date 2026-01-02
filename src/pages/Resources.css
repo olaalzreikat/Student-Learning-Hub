@@ -1,21 +1,8 @@
-/* ============================================
-   RESOURCES PAGE - YOUR DESIGN + PROFESSIONAL LAYOUT
-   Your blue vintage academic aesthetic
-   Professional organized grid structure
-   ============================================ */
-
-/* ============================================
-   1. PAGE FOUNDATION
-   ============================================ */
 
 .resources-page {
     min-height: 100vh;
     background: #FFFFFF;
 }
-
-/* ============================================
-   2. HERO SECTION - YOUR DESIGN
-   ============================================ */
 
 .resources-hero {
     position: relative;
@@ -61,19 +48,11 @@
     color: #475569;
 }
 
-/* ============================================
-   3. MAIN CONTAINER
-   ============================================ */
-
 .resources-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 40px 60px;
 }
-
-/* ============================================
-   4. FILTER BAR - YOUR DESIGN
-   ============================================ */
 
 .category-filter-bar {
     display: flex;
@@ -143,10 +122,6 @@
     color: #94a3b8;
 }
 
-/* ============================================
-   5. PROFESSIONAL SECTION STRUCTURE
-   ============================================ */
-
 .resource-section {
     margin-bottom: 56px;
 }
@@ -173,11 +148,6 @@
     margin-top: 4px;
 }
 
-/* ============================================
-   6. PROFESSIONAL GRID SYSTEM
-   ============================================ */
-
-/* Classes Grid - 4 columns on desktop (smaller cards) */
 .classes-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -185,7 +155,6 @@
     margin-bottom: 32px;
 }
 
-/* Videos Grid - 3 columns */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -193,7 +162,6 @@
     margin-bottom: 32px;
 }
 
-/* Quizzes Grid - 4 columns (horizontal cards) */
 .quizzes-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -201,7 +169,6 @@
     margin-bottom: 32px;
 }
 
-/* Problems Grid - 4 columns */
 .problems-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -209,16 +176,12 @@
     margin-bottom: 32px;
 }
 
-/* Downloads Grid - 3 columns */
 .downloads-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-/* ============================================
-   7. CLASS CARDS - YOUR EXACT DESIGN
-   ============================================ */
 
 .lesson-card {
     position: relative;
@@ -331,10 +294,6 @@
 .class-action-btn:active {
     transform: translateY(0);
 }
-
-/* ============================================
-   8. VIDEO CARDS - YOUR EXACT DESIGN
-   ============================================ */
 
 .video-card {
     position: relative;
@@ -471,7 +430,6 @@
     transform: translateY(0);
 }
 
-/* Video Filter Dropdown */
 .video-filter-dropdown {
     padding: 8px 12px;
     border: 2px solid #e2e8f0;
@@ -496,10 +454,6 @@
     border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
-
-/* ============================================
-   9. QUIZ CARDS - YOUR EXACT DESIGN
-   ============================================ */
 
 .quiz-card {
     display: flex;
@@ -573,10 +527,6 @@
     background: #f8fafc;
     color: #1e293b;
 }
-
-/* ============================================
-   10. DOWNLOAD CARDS - YOUR EXACT DESIGN
-   ============================================ */
 
 .download-card {
     display: flex;
@@ -653,7 +603,6 @@
     box-shadow: 0 4px 8px rgba(30, 64, 175, 0.2);
 }
 
-/* Download Filter Dropdown */
 .guide-filter-dropdown {
     padding: 8px 12px;
     border: 2px solid #e2e8f0;
@@ -678,10 +627,6 @@
     border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
-
-/* ============================================
-   11. SHOW MORE BUTTON
-   ============================================ */
 
 .show-more-btn {
     width: 100%;
@@ -713,10 +658,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   12. EMPTY STATE
-   ============================================ */
-
 .no-resources {
     padding: 60px 20px;
     text-align: center;
@@ -724,10 +665,6 @@
     font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
-
-/* ============================================
-   13. RESPONSIVE DESIGN
-   ============================================ */
 
 @media (max-width: 1200px) {
     .classes-grid {
