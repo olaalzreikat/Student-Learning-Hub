@@ -123,10 +123,6 @@
     backdrop-filter: blur(10px);
 }
 
-/* ============================================
-   3. TWO COLUMN LAYOUT - ENHANCED SPACING
-   ============================================ */
-
 .videoLayout {
     background: #F1F5F9;
     max-width: 1400px;
