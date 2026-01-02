@@ -1,11 +1,4 @@
-/* ============================================
-   QUIZ PAGE - SAME LAYOUT AS LESSONS/VIDEO
-   Two columns: Main Content + Sidebar
-   ============================================ */
 
-/* ============================================
-   1. PAGE FOUNDATION
-   ============================================ */
 
 .quizPage {
     min-height: 100vh;
@@ -42,9 +35,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   2. HEADER SECTION
-   ============================================ */
 
 .quizWrapper {
     padding: 0;
@@ -137,10 +127,6 @@
     margin-top: 8px;
 }
 
-/* ============================================
-   3. TWO COLUMN LAYOUT
-   ============================================ */
-
 .quizLayout {
     background: #F1F5F9;
     max-width: 1400px;
@@ -152,9 +138,6 @@
     align-items: start;
 }
 
-/* ============================================
-   4. MAIN CONTENT (LEFT)
-   ============================================ */
 
 .quizMainContent {
     display: flex;
@@ -306,9 +289,6 @@
     box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
-/* ============================================
-   5. OPTION EXPLANATIONS - WHY RIGHT/WRONG
-   ============================================ */
 
 .optionExplanation {
     margin-top: 12px;
@@ -356,9 +336,6 @@
     font-weight: 500;
 }
 
-/* ============================================
-   6. NAVIGATION BUTTONS
-   ============================================ */
 
 .questionNavigation {
     display: flex;
@@ -436,10 +413,6 @@
 .btnSubmit:active {
     transform: translateY(0);
 }
-
-/* ============================================
-   7. RIGHT SIDEBAR
-   ============================================ */
 
 .quizSidebar {
     display: flex;
@@ -574,10 +547,6 @@
 .toolIconBtn:last-child {
     margin-bottom: 0;
 }
-
-/* ============================================
-   8. FLOATING TOOLS
-   ============================================ */
 
 .floatingTool {
     position: fixed;
@@ -728,10 +697,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   9. RESULTS SCREEN
-   ============================================ */
-
 .resultsContainer {
     background: white;
     border-radius: 16px;
@@ -803,10 +768,6 @@
 .btnPrimary:active {
     transform: translateY(0);
 }
-
-/* ============================================
-   10. RESPONSIVE
-   ============================================ */
 
 @media (max-width: 1200px) {
     .quizLayout {
