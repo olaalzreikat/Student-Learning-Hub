@@ -1,4 +1,3 @@
-/* Dashboard Page - Enhanced with Vintage Academic Aesthetic */
 
 .dashboard-page {
     min-height: 100vh;
@@ -82,7 +81,6 @@
     to { transform: rotate(360deg); }
 }
 
-/* Welcome Banner - Enhanced */
 .welcome-banner-enhanced {
     background: rgb(226, 243, 255);
     border-radius: 20px;
