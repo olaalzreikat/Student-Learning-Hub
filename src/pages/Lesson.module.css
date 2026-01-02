@@ -212,7 +212,6 @@
     color: #475569;
 }
 
-/* Objective Box - Clean Blue */
 .objectiveBox {
     background: #F0F9FF;
     border: 1px solid #BAE6FD;
@@ -239,7 +238,6 @@
     font-weight: 500;
 }
 
-/* Warm-Up Box - Clean Yellow */
 .warmUpBox {
     background: #FFFBEB;
     padding: 20px 24px;
@@ -307,7 +305,6 @@
     font-weight: 600;
 }
 
-/* Examples Box - Clean Green */
 .examplesBox {
     background: #f8fffa;
     padding: 24px;
