@@ -100,9 +100,6 @@
     margin-top: 8px;
 }
 
-/* ============================================
-   4. CONTENT SECTION - DIFFERENT BACKGROUND
-   ============================================ */
 
 .lessonLayout {
     background: #ffffff;
@@ -117,9 +114,6 @@
 
 }
 
-/* ============================================
-   5. TABLE OF CONTENTS (Left Sidebar)
-   ============================================ */
 
 .lessonSidebar {
     background: white;
@@ -188,9 +182,6 @@
     font-size: 14px;
 }
 
-/* ============================================
-   6. MAIN CONTENT AREA
-   ============================================ */
 
 .lessonMain {
     display: flex;
@@ -220,10 +211,6 @@
     line-height: 1.8;
     color: #475569;
 }
-
-/* ============================================
-   7. SECTION-SPECIFIC STYLING
-   ============================================ */
 
 /* Objective Box - Clean Blue */
 .objectiveBox {
@@ -809,9 +796,6 @@
     background: #EFF6FF;
 }
 
-/* ============================================
-   10. FLOATING TOOLS (Calculator & Notes)
-   ============================================ */
 
 .floatingTool {
     position: fixed;
@@ -1055,10 +1039,6 @@
         font-size: 28px;
     }
 }
-
-/* ============================================
-   12. HELP SECTION STYLING
-   ============================================ */
 
 .helpSection {
     display: flex;
