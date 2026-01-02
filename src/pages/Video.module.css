@@ -1,11 +1,4 @@
-/* ============================================
-   VIDEO PAGE - MODERN PROFESSIONAL DESIGN
-   Enhanced visual hierarchy and polish
-   ============================================ */
 
-/* ============================================
-   1. PAGE FOUNDATION
-   ============================================ */
 
 .videoPage {
     min-height: 100vh;
@@ -42,9 +35,6 @@
     transform: translateY(0);
 }
 
-/* ============================================
-   2. HEADER SECTION - ENHANCED GRADIENT
-   ============================================ */
 
 .videoWrapper {
     padding: 0;
@@ -148,17 +138,15 @@
     align-items: start;
 }
 
-/* ============================================
    4. LEFT COLUMN - MAIN CONTENT
-   ============================================ */
-
+  
 .videoMainContent {
     display: flex;
     flex-direction: column;
     gap: 28px;
 }
 
-/* Video Player - Enhanced Shadow */
+
 .videoPlayerBox {
     position: relative;
     width: 100%;
@@ -183,7 +171,6 @@
     border: none;
 }
 
-/* Instructor Box - Refined */
 .instructorBox {
     background: white;
     border: 1px solid #E2E8F0;
@@ -243,9 +230,6 @@
     line-height: 1.5;
 }
 
-/* ============================================
-   5. TABS CONTAINER - MODERN DESIGN
-   ============================================ */
 
 .tabsContainer {
     background: white;
@@ -308,9 +292,7 @@
     }
 }
 
-/* ============================================
-   6. TAB CONTENT SECTIONS - REFINED
-   ============================================ */
+
 
 .aboutSection,
 .learningSection,
@@ -357,7 +339,6 @@
     margin-bottom: 0;
 }
 
-/* Learning Objectives - Enhanced */
 .objectiveItem {
     display: flex;
     gap: 14px;
@@ -391,7 +372,6 @@
     line-height: 1.6;
 }
 
-/* Details Grid - Improved */
 .detailGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -427,7 +407,6 @@
     letter-spacing: -0.3px;
 }
 
-/* Notes - Enhanced Textarea */
 .notesTextarea {
     width: 100%;
     padding: 18px;
@@ -567,7 +546,6 @@
     transform: translateY(0);
 }
 
-/* Discussions - Polished */
 .discussionForm {
     background: linear-gradient(135deg, #FAFBFC 0%, #F8FAFC 100%);
     border: 2px solid #E2E8F0;
@@ -718,9 +696,6 @@
     transform: translateY(-1px);
 }
 
-/* ============================================
-   7. RIGHT SIDEBAR - ENHANCED
-   ============================================ */
 
 .videoSidebar {
     display: flex;
@@ -898,9 +873,6 @@
     font-weight: 500;
 }
 
-/* ============================================
-   8. RESPONSIVE - OPTIMIZED
-   ============================================ */
 
 @media (max-width: 1200px) {
     .videoLayout {
@@ -998,9 +970,6 @@
     }
 }
 
-/* ============================================
-   REPLY SYSTEM - NESTED DISCUSSIONS
-   ============================================ */
 
 .discussionThread {
     margin-bottom: 24px;
