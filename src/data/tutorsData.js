@@ -1,0 +1,102 @@
+export const tutorsData = [
+    {
+        id: 'algebra-1',
+        title: 'Brian M.',
+        topic: 'Algebra',
+        subject: 'Algebra 1',
+        description: 'Year 11 student looking to help/support those seeking help in Algebra.',
+        year: '11',
+    },
+    {
+        id: 'algebra-1-2',
+        title: 'Riley D.',
+        topic: 'Algebra',
+        subject: 'Algebra 1 & 2',
+        description: 'Year 12 student looking to help/support those seeking help in Algebra.',
+        year: '12',
+    },
+    {
+        id: 'algebra-2',
+        title: 'Alex C.',
+        topic: 'Algebra',
+        subject: 'Algebra 2',
+        description: 'Year 11 student looking to help/support those seeking help in Algebra.',
+        year: '11',
+    },
+    {
+        id: 'algebra-2-honors',
+        title: 'Sam L.',
+        topic: 'Algebra',
+        subject: 'Algebra 2 H',
+        description: 'Year 11 student looking to help/support those seeking help in Algebra.',
+        year: '11',
+        
+    },
+    {
+        id: 'algebra-2-geometry',
+        title: 'Max W.',
+        topic: 'Algebra Geometry',
+        subject: 'Algebra 2 & Geometry',
+        description: 'Year 12 student looking to help/support those seeking help in Algebra 2 and Geometry.',
+        year: '12',
+    },
+    {
+        id: 'geometry',
+        title: 'Emily D.',
+        topic: 'Geometry',
+        subject: 'Geometry',
+        description: 'Year 12 student looking to help/support those seeking help in Geometry.',
+        year: '12',
+        
+    },
+    {
+        id: 'precalculus',
+        title: 'Jane T.',
+        topic: 'Calculus',
+        subject: 'Pre-calculus',
+        description: 'Year 12 student looking to help/support those seeking help in Pre-calculus.',
+        year: '12',
+    },
+    {
+        id: 'precalculus-statistics',
+        title: 'Frank P.',
+        topic: 'Calculus Statistics',
+        subject: 'Pre-calculus & Statistics',
+        description: 'Year 12 student looking to help/support those seeking help in Pre-calculus and Statistics.',
+        year: '12',
+    },
+    {
+        id: 'calculus-ab',
+        title: 'Milo A.',
+        topic: 'Calculus',
+        subject: 'Calculus',
+        description: 'Year 12 student looking to help/support those seeking help in AB Calculus.',
+        year: '12',
+       
+    },
+    {
+        id: 'statistics',
+        title: 'Wilson H.',
+        topic: 'Statistics',
+        subject: 'Statistics',
+        description: 'Year 12 student looking to help/support those seeking help in Statistics.',
+        year: '12',
+       
+    },
+    {
+        id: 'trigonometry',
+        title: 'Leon S.',
+        topic: 'Trigonometry',
+        subject: 'Trigonometry',
+        description: 'Year 12 student looking to help/support those seeking help in Trigonometry.',
+        year: '12',
+    },
+    {
+        id: 'trigonometry-calculus',
+        title: 'Kate G.',
+        topic: 'Trigonometry Calculus',
+        subject: 'Trigonometry & Calculus',
+        description: 'Year 12 student looking to help/support those seeking help in Trigonometry and Calculus.',
+        year: '12',
+    }
+];
