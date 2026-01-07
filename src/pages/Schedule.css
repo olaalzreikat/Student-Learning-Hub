@@ -1,0 +1,43 @@
+.schedule-hero {
+    position: relative;
+    height: 400px;
+    background-image: url('../assets/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: #1e293b;
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e293b;
+    letter-spacing: -0.5px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #475569;
+}
