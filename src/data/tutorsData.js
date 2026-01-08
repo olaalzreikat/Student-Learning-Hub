@@ -6,6 +6,8 @@ export const tutorsData = [
         subject: 'Algebra 1',
         description: 'Year 11 student looking to help/support those seeking help in Algebra.',
         year: '11',
+        availableDays: 'Mondays, Wednesdays, Thursdays',
+        availableTimes: 'between 2:30-4:00',
     },
     {
         id: 'algebra-1-2',
@@ -14,6 +16,8 @@ export const tutorsData = [
         subject: 'Algebra 1 & 2',
         description: 'Year 12 student looking to help/support those seeking help in Algebra.',
         year: '12',
+        availableDays: 'Mondays, Tuesdays, Wednesdays',
+        availableTimes: 'between 3:00-5:00',
     },
     {
         id: 'algebra-2',
@@ -22,6 +26,8 @@ export const tutorsData = [
         subject: 'Algebra 2',
         description: 'Year 11 student looking to help/support those seeking help in Algebra.',
         year: '11',
+        availableDays: 'Mondays, Tuesdays, Thursdays',
+        availableTimes: 'between 2:30-3:30',
     },
     {
         id: 'algebra-2-honors',
@@ -30,6 +36,8 @@ export const tutorsData = [
         subject: 'Algebra 2 H',
         description: 'Year 11 student looking to help/support those seeking help in Algebra.',
         year: '11',
+        availableDays: 'Thursdays, Fridays',
+        availableTimes: 'between 3:00-5:00',
         
     },
     {
@@ -39,6 +47,8 @@ export const tutorsData = [
         subject: 'Algebra 2 & Geometry',
         description: 'Year 12 student looking to help/support those seeking help in Algebra 2 and Geometry.',
         year: '12',
+        availableDays: 'Tuesdays, Wednesdays',
+        availableTimes: 'between 2:30-4:30',
     },
     {
         id: 'geometry',
@@ -47,6 +57,8 @@ export const tutorsData = [
         subject: 'Geometry',
         description: 'Year 12 student looking to help/support those seeking help in Geometry.',
         year: '12',
+        availableDays: 'Mondays, Wednesdays, Thursdays',
+        availableTimes: 'between 3:00-4:30',
         
     },
     {
@@ -56,6 +68,8 @@ export const tutorsData = [
         subject: 'Pre-calculus',
         description: 'Year 12 student looking to help/support those seeking help in Pre-calculus.',
         year: '12',
+        availableDays: 'Mondays, Tuesdays',
+        availableTimes: 'between 2:30-4:00',
     },
     {
         id: 'precalculus-statistics',
@@ -64,6 +78,8 @@ export const tutorsData = [
         subject: 'Pre-calculus & Statistics',
         description: 'Year 12 student looking to help/support those seeking help in Pre-calculus and Statistics.',
         year: '12',
+        availableDays: 'Wednesdays, Thursdays',
+        availableTimes: 'between 2:30-4:00',
     },
     {
         id: 'calculus-ab',
@@ -72,6 +88,8 @@ export const tutorsData = [
         subject: 'Calculus',
         description: 'Year 12 student looking to help/support those seeking help in AB Calculus.',
         year: '12',
+        availableDays: 'Mondays, Tuesdays, Wednesdays, Thursdays, Fridays',
+        availableTimes: 'between 2:00-3:00',
        
     },
     {
@@ -81,6 +99,8 @@ export const tutorsData = [
         subject: 'Statistics',
         description: 'Year 12 student looking to help/support those seeking help in Statistics.',
         year: '12',
+        availableDays: 'Mondays, Tuesdays, Thursdays',
+        availableTimes: 'between 3:00-4:30',
        
     },
     {
@@ -90,6 +110,8 @@ export const tutorsData = [
         subject: 'Trigonometry',
         description: 'Year 12 student looking to help/support those seeking help in Trigonometry.',
         year: '12',
+        availableDays: 'Wednesdays, Thursdays, Fridays',
+        availableTimes: 'between 2:30-5:00',
     },
     {
         id: 'trigonometry-calculus',
@@ -98,5 +120,7 @@ export const tutorsData = [
         subject: 'Trigonometry & Calculus',
         description: 'Year 12 student looking to help/support those seeking help in Trigonometry and Calculus.',
         year: '12',
+        availableDays: 'Mondays, Wednesdays, Fridays',
+        availableTimes: 'between 2:00-4:00',
     }
 ];
