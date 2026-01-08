@@ -127,6 +127,7 @@ function Schedule() {
       quizzes = quizzes.filter((q) => q.topic.toLowerCase() === activeFilter);
       problems = problems.filter((p) => p.topic.toLowerCase() === activeFilter);
       guides = guides.filter((g) => g.topic.toLowerCase() === activeFilter);
+      groupSessions = groupSessions.filter((g)=>g.topic.toLowerCase() === activeFilter);
     }
 
     // Apply video class filter
@@ -136,7 +137,7 @@ function Schedule() {
 
     // Apply guide topic filter
     if (guideFilter !== "all") {
-      guides = guides.filter((g) => g.topic.toLowerCase() === guideFilter);
+      groupSessions = groupSessions.filter((g) => g.topic.toLowerCase() === guideFilter);
     }
 
     // Apply search filter
@@ -145,7 +146,7 @@ function Schedule() {
       tutors = tutors.filter((t) => t.topic.toLowerCase().includes(query));
     }
 
-    return { tutors };
+    return { tutors, groupSessions };
   };
 
   const filtered = getFilteredData();
@@ -254,7 +255,7 @@ function Schedule() {
                             Year {tutorYear} • {tutorLesson} Lessons
                           </p>
                         </div>
-                        <button className="class-action-btn book-btn">
+                        <button className="book-btn">
                           Book Now
                         </button>
                       </div>
@@ -266,39 +267,44 @@ function Schedule() {
           </div>
         )}
         {/* GROUP SESSIONS SECTION */}
-        {
-          <div className="resource-section">
-            <div className="section-header">
-              <h2>Group Sessions</h2>
-            </div>
-            <div className="classes-grid">
-              {filtered.tutors.map((classItem) => {
-                const tutorYear = classItem.year;
-                const tutorLesson = classItem.subject;
-
-                return (
-                  <div
-                    key={classItem.id}
-                    className="lesson-card"
-                    onClick={() => handleClassClick(classItem)}
-                  >
-                    <div className="lesson-background"></div>
-                    <div className="class-card-content">
-                      <div>
-                        <h3 className="lesson-title">{classItem.title}</h3>
-                        <div className="class-info">
-                          <p className="class-stats">
-                            Year {tutorYear} • {tutorLesson} Lessons
-                          </p>
+                {(
+                    <div className="resource-section">
+                        <div className="section-header">
+                            <h2>Group Study Sessions</h2>
+                            <select 
+                                className="guide-filter-dropdown"
+                                value={guideFilter}
+                                onChange={(e) => setGuideFilter(e.target.value)}
+                            >
+                                <option value="all">All classes</option>
+                                <option value="algebra">Algebra</option>
+                                <option value="geometry">Geometry</option>
+                                <option value="calculus">Calculus</option>
+                                <option value="statistics">Statistics</option>
+                            </select>
                         </div>
-                      </div>
+                        <div className="downloads-grid">
+                            {filtered.groupSessions.map((group) => {
+                                
+                                return (
+                                    <div key={group.id} className="download-card">
+                                        <div className="download-content">
+                                            <h4 className="group-title"><span className="group-title-background">{group.title}</span></h4>
+                                            <h5 className="download-title">{group.subject}</h5>
+                                            <p className="download-description">{group.description}</p>
+                                            <div className="group-meta">
+                                                <span className="group-separator">{group.currentSize} / {group.totalSize} students attending session</span>
+                                            </div>
+                                        </div>
+                                        <button className={`download-btn`}>
+                                            Join Session
+                                        </button>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        }
+                )}
       </div>
 
       {/* Class Modal */}
