@@ -79,24 +79,25 @@ function TutorModal({ tutorsData, onClose}) {
                             <div className='tutorModal-description'>
                                 <div className='tutorModal-description-section'>
                                     <h2>Bio</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis non omnis dolore. Inventore omnis libero adipisci amet cupiditate incidunt et?</p>
+                                    <p>{tutorsData.title} is passionate about helping others not only learn math but love it as well! With their help, you will learn to excel in mathematics while also finding it rewarding and fun.</p>
                                 </div>
                                 <hr></hr>
                                 <div className='tutorModal-description-section'>
                                     <h2>Schedule</h2>
-                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <p>{tutorsData.title} is available:</p>
+                                    <p>{tutorsData.availableDays} {tutorsData.availableTimes}</p>
                                 </div>
                                 <hr></hr>
                                 <div className='tutorModal-description-section'>
                                     <h2>Subjects</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ea.</p>
+                                    <p>{tutorsData.title} specializes in tutoring {tutorsData.subject}</p>
                                 </div>
                             </div>
                             <div className="continue-section">
                                 <div className="continue-header">
                                     <span className='tutor-book'>Book tutoring session now:</span>
                                 </div>
-                                <button className="add-btn" onClick={() => setShowAgendaModal(true)}>Book</button>
+                                <button className="add-book-btn" onClick={() => setShowAgendaModal(true)}>Book</button>
                             </div>
                         </div>
                     )}
