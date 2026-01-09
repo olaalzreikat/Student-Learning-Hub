@@ -128,7 +128,7 @@ function Dashboard() {
             localStorage.setItem('dailyTasks', JSON.stringify({ date: today, tasks: updatedTasks }));
             setNewTask('');
             setShowTaskModal(false);
-            showNotificationMessage(' New task added to your daily goals!');
+            showNotificationMessage('✨ New task added to your daily goals!');
         }
     };
 
@@ -196,22 +196,37 @@ function Dashboard() {
             localStorage.setItem('agendaItems', JSON.stringify(updatedAgenda));
             setNewAgendaItem({ title: '', subject: '', date: '', time: '' });
             setShowAgendaModal(false);
-            showNotificationMessage('Session scheduled successfully!');
+            showNotificationMessage('✅ Session scheduled successfully!');
         }
     };
 
     const handleRemoveAgendaItem = (index) => {
+        const removedItem = agendaItems[index];
         const updatedAgenda = agendaItems.filter((_, i) => i !== index);
         setAgendaItems(updatedAgenda);
         localStorage.setItem('agendaItems', JSON.stringify(updatedAgenda));
+        
+        // If it's a group session, decrease the count
+        if (removedItem.type === 'group' && removedItem.groupId) {
+            const savedCounts = localStorage.getItem('groupSessionCounts');
+            if (savedCounts) {
+                const sessionCounts = JSON.parse(savedCounts);
+                const currentCount = sessionCounts[removedItem.groupId] || 0;
+                sessionCounts[removedItem.groupId] = Math.max(0, currentCount - 1);
+                localStorage.setItem('groupSessionCounts', JSON.stringify(sessionCounts));
+            }
+            showNotificationMessage(`Cancelled group session: ${removedItem.title}`);
+        } else {
+            showNotificationMessage('Session removed from schedule');
+        }
     };
 
     // Quick actions
     const quickActions = [
-        { icon: '', label: 'Watch Video', action: () => navigate('/resources') },
-        { icon: '', label: 'Start Lesson', action: () => navigate('/resources')},
-        { icon: '', label: 'Take Quiz', action: () => navigate('/resources')},
-        { icon: '', label: 'Practice', action: () => navigate('/resources') }
+        { label: 'Watch Video', action: () => navigate('/resources') },
+        { label: 'Start Lesson', action: () => navigate('/resources')},
+        { label: 'Take Quiz', action: () => navigate('/resources')},
+        { label: 'Practice', action: () => navigate('/resources') }
     ];
 
     // Calculate real achievements based on actual progress
@@ -221,25 +236,10 @@ function Dashboard() {
     const completedLessons = progress?.completedLessons?.length || 0;
     const completedQuizzes = progress?.completedQuizzes?.length || 0;
     
-    if (completedVideos >= 1) achievements.push({ name: 'First Steps', icon: '', description: 'Watched first video' });
-    if (completedVideos >= 5) achievements.push({ name: 'Video Enthusiast', icon: '', description: 'Watched 5 videos' });
-    if (completedLessons >= 1) achievements.push({ name: 'Knowledge Seeker', icon: '', description: 'Completed first lesson' });
-    if (completedQuizzes >= 1) achievements.push({ name: 'Quiz Master', icon: '', description: 'Completed first quiz' });
-    if (completedLessons >= 5) achievements.push({ name: 'Dedicated Learner', icon: '', description: 'Completed 5 lessons' });
-    
     // Check for perfect quiz score
     const quizScores = JSON.parse(localStorage.getItem('quizScores') || '{}');
     const hasPerfectScore = Object.values(quizScores).some(score => score === 100);
-    if (hasPerfectScore) achievements.push({ name: 'Perfect Score', icon: '', description: '100% on a quiz' });
 
-    const allPossibleAchievements = [
-        { id: 'first-video', name: 'First Steps', description: 'Watch your first video', icon: '', earned: completedVideos >= 1 },
-        { id: 'video-5', name: 'Video Enthusiast', description: 'Watch 5 videos', icon: '', earned: completedVideos >= 5 },
-        { id: 'first-lesson', name: 'Knowledge Seeker', description: 'Complete your first lesson', icon: '', earned: completedLessons >= 1 },
-        { id: 'first-quiz', name: 'Quiz Master', description: 'Complete your first quiz', icon: '', earned: completedQuizzes >= 1 },
-        { id: 'lesson-5', name: 'Dedicated Learner', description: 'Complete 5 lessons', icon: '', earned: completedLessons >= 5 },
-        { id: 'perfect-quiz', name: 'Perfect Score', description: 'Score 100% on a quiz', icon: '', earned: hasPerfectScore }
-    ];
 
     if (isLoading) {
         return (
@@ -283,11 +283,11 @@ function Dashboard() {
 
     // Calculate subject progress
     const subjects = [
-        { name: 'Algebra', icon: '', color: '#4F46E5' },
-        { name: 'Geometry', icon: '', color: '#7C3AED' },
-        { name: 'Calculus', icon: '', color: '#DB2777' },
-        { name: 'Trigonometry', icon: '', color: '#DC2626' },
-        { name: 'Statistics', icon: '', color: '#059669' }
+        { name: 'Algebra', icon: 'A', color: '#9596ffff' },
+        { name: 'Geometry', icon: 'G', color: '#7C3AED' },
+        { name: 'Calculus', icon: 'C', color: '#103caaff' },
+        { name: 'Trigonometry', icon: 'T', color: '#db2525ff' },
+        { name: 'Statistics', icon: 'S', color: '#059669' }
     ];
 
     const getSubjectProgress = (subject) => {
@@ -330,7 +330,7 @@ function Dashboard() {
                 <div className="welcome-banner-enhanced">
                     <div className="welcome-content-enhanced">
                         <div className="welcome-text-section">
-                            <h1>Hello! </h1>
+                            <h1>Hello!</h1>
                             <p>Welcome back to your learning journey</p>
                             <div className="welcome-stats">
                                 <div className="stat-bubble">
@@ -340,10 +340,6 @@ function Dashboard() {
                                 <div className="stat-bubble">
                                     <span className="stat-number">{completedResources}</span>
                                     <span className="stat-label">Completed</span>
-                                </div>
-                                <div className="stat-bubble">
-                                    <span className="stat-number">{achievements.length}</span>
-                                    <span className="stat-label">Achievements</span>
                                 </div>
                             </div>
                         </div>
@@ -361,6 +357,7 @@ function Dashboard() {
                                 onClick={action.action}
                                 style={{ borderLeftColor: action.color }}
                             >
+                                <span className="action-icon">{action.icon}</span>
                                 <span className="action-label">{action.label}</span>
                                 <span className="action-arrow">→</span>
                             </button>
@@ -471,19 +468,19 @@ function Dashboard() {
                                     if (!activity || !activity.type || !activity.title) return null;
                                     
                                     const icons = {
-                                        video: '',
-                                        lesson: '',
-                                        quiz: '',
-                                        problems: '',
-                                        guide: ''
+                                        video: 'V',
+                                        lesson: 'L',
+                                        quiz: 'Q',
+                                        problems: 'P',
+                                        guide: 'G'
                                     };
 
                                     const colors = {
                                         video: '#4F46E5',
-                                        lesson: '#7C3AED',
+                                        lesson: '#3e108eff',
                                         quiz: '#DB2777',
                                         problems: '#DC2626',
-                                        guide: '#059669'
+                                        guide: '#0b7588ff'
                                     };
 
                                     return (
@@ -494,7 +491,7 @@ function Dashboard() {
                                             style={{ cursor: 'pointer' }}
                                         >
                                             <div className="lesson-icon" style={{ background: colors[activity.type] || '#6B7280' }}>
-                                                {icons[activity.type] || 'icon'}
+                                                {icons[activity.type] || ''}
                                             </div>
                                             <div className="lesson-info">
                                                 <h4>{activity.title}</h4>
@@ -570,13 +567,17 @@ function Dashboard() {
                                         .slice(0, 5)
                                         .map((item, index) => {
                                             const subject = subjects.find(s => s.name.toLowerCase() === item.subject.toLowerCase()) || subjects[0];
+                                            const isGroupSession = item.type === 'group';
+                                            
                                             return (
                                                 <div key={index} className="agenda-item">
                                                     <div className="agenda-icon" style={{ background: subject.color }}>
                                                         {subject.icon}
                                                     </div>
                                                     <div className="agenda-details">
-                                                        <h4>{item.title}</h4>
+                                                        <h4>
+                                                            {item.title}
+                                                        </h4>
                                                         <span className="agenda-time">{formatSessionDate(item.date, item.time)}</span>
                                                     </div>
                                                     <button 
@@ -592,7 +593,7 @@ function Dashboard() {
                                 ) : (
                                     <div className="no-sessions">
                                         <p>No upcoming sessions scheduled.</p>
-                                        <p className="no-sessions-hint">Click "Add" to schedule a new session!</p>
+                                        <p className="no-sessions-hint">Click "Add" to schedule a tutoring session or visit the <span style={{ color: '#4F46E5', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => navigate('/schedule')}>Schedule page</span> to join a group session!</p>
                                     </div>
                                 )}
                             </div>
@@ -616,7 +617,7 @@ function Dashboard() {
                                         cy="60"
                                         r="50"
                                         fill="none"
-                                        stroke="#4F46E5"
+                                        stroke="#423ad0ff"
                                         strokeWidth="10"
                                         strokeDasharray={`${2 * Math.PI * 50}`}
                                         strokeDashoffset={`${2 * Math.PI * 50 * (1 - overallProgress / 100)}`}
@@ -638,7 +639,7 @@ function Dashboard() {
                                     <span>{completedLessons} Lessons</span>
                                 </div>
                                 <div className="breakdown-simple-item">
-                                    <span className="breakdown-dot" style={{ background: '#DB2777' }}></span>
+                                    <span className="breakdown-dot" style={{ background: '#ab1458ff' }}></span>
                                     <span>{completedQuizzes} Quizzes</span>
                                 </div>
                             </div>

@@ -1,4 +1,3 @@
-
 .dashboard-page {
     min-height: 100vh;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -27,7 +26,7 @@
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: rgb(9, 150, 89);
     color: white;
     padding: 1rem 1.5rem;
     border-radius: 12px;
@@ -196,16 +195,6 @@
     box-shadow: 0 4px 12px rgba(9, 9, 116, 0.15);
 }
 
-.action-icon {
-    font-size: 2rem;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f3f4f6;
-    border-radius: 10px;
-}
 
 .action-label {
     flex: 1;
@@ -802,6 +791,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.group-session-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
 }
 
 .agenda-time {

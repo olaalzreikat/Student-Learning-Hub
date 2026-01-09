@@ -97,7 +97,7 @@ function Quiz() {
     const saveNotes = () => {
         if (currentQuiz) {
             localStorage.setItem(`quiz-notes-${currentQuiz.id}`, notes);
-            alert('📝 Notes saved!');
+            alert(' Notes saved!');
         }
     };
 
