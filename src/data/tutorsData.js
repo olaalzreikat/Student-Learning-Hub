@@ -8,6 +8,7 @@ export const tutorsData = [
         year: '11',
         availableDays: 'Mondays, Wednesdays, Thursdays',
         availableTimes: 'between 2:30-4:00',
+        specification: 'M',
     },
     {
         id: 'algebra-1-2',
@@ -18,6 +19,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Mondays, Tuesdays, Wednesdays',
         availableTimes: 'between 3:00-5:00',
+        specification: 'F',
     },
     {
         id: 'algebra-2',
@@ -28,6 +30,7 @@ export const tutorsData = [
         year: '11',
         availableDays: 'Mondays, Tuesdays, Thursdays',
         availableTimes: 'between 2:30-3:30',
+        specification: 'M',
     },
     {
         id: 'algebra-2-honors',
@@ -38,7 +41,7 @@ export const tutorsData = [
         year: '11',
         availableDays: 'Thursdays, Fridays',
         availableTimes: 'between 3:00-5:00',
-        
+        specification: 'F',
     },
     {
         id: 'algebra-2-geometry',
@@ -49,6 +52,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Tuesdays, Wednesdays',
         availableTimes: 'between 2:30-4:30',
+        specification: 'M',
     },
     {
         id: 'geometry',
@@ -59,7 +63,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Mondays, Wednesdays, Thursdays',
         availableTimes: 'between 3:00-4:30',
-        
+        specification: 'F',
     },
     {
         id: 'precalculus',
@@ -70,6 +74,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Mondays, Tuesdays',
         availableTimes: 'between 2:30-4:00',
+        specification: 'F',
     },
     {
         id: 'precalculus-statistics',
@@ -80,6 +85,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Wednesdays, Thursdays',
         availableTimes: 'between 2:30-4:00',
+        specification: 'M',
     },
     {
         id: 'calculus-ab',
@@ -90,7 +96,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Mondays, Tuesdays, Wednesdays, Thursdays, Fridays',
         availableTimes: 'between 2:00-3:00',
-       
+       specification: 'M',
     },
     {
         id: 'statistics',
@@ -101,7 +107,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Mondays, Tuesdays, Thursdays',
         availableTimes: 'between 3:00-4:30',
-       
+       specification: 'M',
     },
     {
         id: 'trigonometry',
@@ -112,6 +118,7 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Wednesdays, Thursdays, Fridays',
         availableTimes: 'between 2:30-5:00',
+        specification: 'M',
     },
     {
         id: 'trigonometry-calculus',
@@ -122,5 +129,6 @@ export const tutorsData = [
         year: '12',
         availableDays: 'Mondays, Wednesdays, Fridays',
         availableTimes: 'between 2:00-4:00',
+        specification: 'F',
     }
 ];
