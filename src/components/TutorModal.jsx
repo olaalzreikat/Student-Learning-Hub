@@ -3,6 +3,8 @@ import { tutorsData } from '../data/tutorsData';
 import './ClassModal.css';
 import './TutorModal.css';
 import '../pages/Dashboard.css';
+import tutor2 from '../assets/tutor2.jpg';
+import tutor3 from '../assets/tutor3.jpg';
 
 function TutorModal({ tutorsData, onClose}) {
     const [showAgendaModal, setShowAgendaModal] = useState(false);
@@ -65,8 +67,8 @@ function TutorModal({ tutorsData, onClose}) {
 
                 {/* Header */}
                 <div className="modal-header">
-                    <div className="class-image">
-                        <span>{tutorsData.subject}</span>
+                    <div className="tutor-image">
+                        <img src={tutorsData.specification === 'M' ? tutor3 : tutor2} className='tutor-pfp'></img>
                     </div>
                     <div className="header-info">
                         <h2 className="modal-title">{tutorsData.title}</h2>
