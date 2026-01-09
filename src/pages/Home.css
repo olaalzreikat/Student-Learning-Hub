@@ -1,0 +1,193 @@
+.home-page {
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+
+.home-hero {
+    position: relative;
+    height: 600px;
+    background-image: url('../assets/home-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.home-hero-blue{
+    height: 600px;
+    width: 100%;
+    background-image:linear-gradient(to bottom,  rgb(8, 8, 85, 0.2), rgba(8, 47, 173, 0.5));
+    display: flex;
+    align-items: center;
+}
+
+/* .home-hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.home-hero-text {
+    text-align: left;
+    color: white;
+    margin-left: 50px
+}
+
+.home-hero-text h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.home-hero-text p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.get-started-btn {
+    width: 40%;
+    padding: 10px 20px;
+    background: #4F46E5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.get-started-btn:hover {
+    background: #3730A3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.2);
+}
+
+.home-action-arrow {
+    font-size: 1.5rem;
+    color: #dfeaf3;
+    transition: transform 0.3s ease;
+}
+
+.home-action-arrow:hover {
+    transform: translateX(5px);
+}
+
+.home-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    color:#1e293b;
+}
+
+.features-title, .courses-container p, .courses-container h1{
+    text-align: center;
+}
+
+.features-title{
+    margin-top: 2rem;
+}
+
+.features-boxes-container{
+    display: flex;
+    align-items: center;
+    height: 400px;
+}
+
+.features-box{
+    width: 400px;
+    background: rgb(226, 243, 255);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    margin: 0 1rem;
+    overflow: hidden;
+    word-wrap:normal;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.features-box h3{
+    margin: 10px;
+}
+
+.features-box:hover{
+    transform: translateY(-5px);
+    background: rgb(209, 230, 246);
+}
+
+.home-action-btn{
+    width: 50%;
+    padding: 10px 20px;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.home-action-btn:hover{
+    background: #1e3a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(30, 64, 175, 0.2);
+}
+
+.courses-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+}
+
+.courses-container h1, .courses-container p, .courses-container button{
+    margin-bottom: 1rem;
+}
+
+.tutors-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 400px;
+}
+
+.tutors-right{
+    text-align:left;
+    margin-left: 40px;
+}
+
+.tutors-right h1, .tutors-right p, .tutors-right button{
+    margin-bottom: 1rem;
+}
+
+.home-tutor-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 560px) {
+    .tutors-container{
+        flex-direction: column-reverse;
+        height: 200px;
+    }
+}
