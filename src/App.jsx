@@ -10,6 +10,10 @@ import Quiz from './pages/Quiz';
 import Problems from './pages/Problems';
 import Video from './pages/Video';
 import Lesson from './pages/Lesson';
+import ChatbotIcon from "./components/ChatbotIcon";
+import ChatForm from "./components/ChatForm";
+import ChatMessage from "./components/ChatMessage";
+import ChatBot from "./components/ChatBot";
 
 
 function AppContent() {
@@ -26,6 +30,7 @@ function AppContent() {
         {!isStandalone && <Navbar />}
         <main id="main-content" className={isStandalone ? "standalone-content" : "main-content"}>
           <ScrollToTop />
+          <ChatBot></ChatBot>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/schedule" element={<Schedule />} />
@@ -36,6 +41,7 @@ function AppContent() {
             <Route path="/video" element={<Video />} />
             <Route path="/lesson" element={<Lesson />} />
           </Routes>
+          
         </main>
         {!isStandalone && <Footer />}
       </div>
